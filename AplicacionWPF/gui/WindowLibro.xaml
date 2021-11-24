@@ -1,0 +1,20 @@
+﻿<Window x:Class="AplicacionWPF.gui.WindowLibro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionWPF.gui"
+        mc:Ignorable="d"
+        Title="WindowLibro" Height="292" Width="358">
+    <Grid HorizontalAlignment="Center" Width="358" Height="276" VerticalAlignment="Top">
+        <Label x:Name="LabelTitulo" Content="Titulo:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelAutor" Content="Autor:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelFechaEntrada" Content="Fecha entrada:" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top"/>
+        <TextBox Margin="127,61,10,0" Validation.Error="Validation_Error" Text="{Binding Path=Titulo, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Margin="127,92,10,0" Validation.Error="Validation_Error" Text="{Binding Path=Autor, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <DatePicker VerticalAlignment="Top" SelectedDate="{Binding Path=FechaEntrada}" Margin="127,121,10,0"/>
+        <Button x:Name="ButtonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="10,196,0,0" Width="87" Height="29" VerticalAlignment="Top" Click="ButtonAceptar_Click"/>
+        <Button x:Name="ButtonCancelar" Content="Cancelar" Margin="261,196,10,0" Height="29" VerticalAlignment="Top" Click="ButtonCancelar_Click"/>
+
+    </Grid>
+</Window>

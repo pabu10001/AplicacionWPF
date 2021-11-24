@@ -1,0 +1,29 @@
+﻿<Window x:Class="AplicacionWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="512" Width="837">
+    <Grid Height="447" VerticalAlignment="Center" Margin="0,0,15,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="202*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="217*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="401*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridLibros" ItemsSource="{Binding Path=listaLibros}" Margin="10,31,10,47" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3"/>
+        <Menu Margin="10,10,10,176" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <MenuItem Header="Archivo" Height="42" Width="57" Click="MenuItem_Click">
+                <MenuItem x:Name="MenuItemNuevo" Header="Nuevo..."/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="ButtonModificar" Content="Modificar" Grid.Column="1" Margin="310,175,10,10" Click="ButtonModificar_Click" Grid.Row="3"/>
+
+    </Grid>
+</Window>
