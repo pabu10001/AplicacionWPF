@@ -17,13 +17,13 @@
             <ColumnDefinition Width="399*"/>
             <ColumnDefinition Width="401*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DataGridLibros" ItemsSource="{Binding Path=listaLibros}" Margin="10,31,10,47" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3"/>
+        <DataGrid x:Name="DataGridLibros" ItemsSource="{Binding Path=listaLibros}" AutoGenerateColumns="True" Margin="10,31,10,47" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3"/>
         <Menu Margin="10,10,10,176" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <MenuItem Header="Archivo" Height="42" Width="57" Click="MenuItem_Click">
                 <MenuItem x:Name="MenuItemNuevo" Header="Nuevo..."/>
             </MenuItem>
         </Menu>
-        <Button x:Name="ButtonModificar" Content="Modificar" Grid.Column="1" Margin="310,175,10,10" Click="ButtonModificar_Click" Grid.Row="3"/>
+        <Button x:Name="ButtonModificar" Content="Modificar" Grid.Column="1" Margin="310,175,10,10" Click="ButtonModificar_Click" Grid.Row="3" MouseEnter="ButtonModificar_MouseEnter"/>
 
     </Grid>
 </Window>

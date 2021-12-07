@@ -33,6 +33,7 @@ namespace AplicacionWPF.gui
             libro = new Libro();
             this.DataContext = libro;
             modificando = false;
+            LabelBinding.DataContext = this;
         }
 
         //Contructor sobrecargado para la modificacion de un Libro

@@ -8,6 +8,8 @@ namespace AplicacionWPF.dto
     public class Libro : INotifyPropertyChanged, ICloneable, IDataErrorInfo
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        private double precio { get; set; }
+
         private String titulo;
         public String Titulo
         {
@@ -105,6 +107,16 @@ namespace AplicacionWPF.dto
         public object Clone()
         {
             return this.MemberwiseClone();
+        }
+
+        //Metodo sobrecargados
+        public void sumPrecio()
+        {
+            this.precio = 0;
+        }
+        public void sumPrecio(double p)
+        {
+            this.precio += p;
         }
     }
 }

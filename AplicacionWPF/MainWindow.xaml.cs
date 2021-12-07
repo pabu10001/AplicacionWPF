@@ -39,14 +39,17 @@ namespace AplicacionWPF
 
         private void ButtonModificar_Click(object sender, RoutedEventArgs e)
         {
-            if(DataGridLibros.SelectedIndex != -1)
+            if (DataGridLibros.SelectedIndex != -1)
             {
                 Libro libro = (Libro)DataGridLibros.SelectedItem;
                 WindowLibro windowLibro = new WindowLibro(logicaNegocio, (Libro)libro.Clone(), DataGridLibros.SelectedIndex);
                 windowLibro.Show();
             }
+        }
 
-            
+        private void ButtonModificar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ButtonModificar.Background = new SolidColorBrush(Colors.Green);
         }
     }
 }
